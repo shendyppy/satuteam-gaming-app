@@ -6,6 +6,7 @@ import GameCard from "../components/GameCard";
 import { fetchCart } from "../stores/cart/action";
 
 import NoDataFound from "../components/NoDataFound";
+import Error from "../components/Error";
 
 function Cart() {
 	const dispatch = useDispatch();
@@ -16,13 +17,11 @@ function Cart() {
 		dispatch(fetchCart());
 	}, [dispatch]);
 
-	if (error) {
-		return <h1>Something went wrong!</h1>;
-	}
-
 	return (
 		<>
-			{loading && <Loading />} :
+			{error && <Error />}
+			{loading && <Loading />}
+
 			{carts.length === 0 ? (
 				<NoDataFound />
 			) : (
