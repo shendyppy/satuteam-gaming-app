@@ -11,7 +11,6 @@ import Add from "./pages/Add";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import Edit from "./pages/Edit";
-import Detail from "./pages/Detail";
 import Footer from "./components/Footer";
 
 function App() {
@@ -20,9 +19,6 @@ function App() {
 			<Provider store={store}>
 				<Navbar />
 				<Switch>
-					<Route path="/detail/:id">
-						<Detail />
-					</Route>
 					<Route path="/edit/:id">
 						<Edit />
 					</Route>

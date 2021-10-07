@@ -1,6 +1,13 @@
 import axios from "axios";
 
-import { SET_GAMES, SET_LOADING, SET_ERROR } from "./actionType";
+import {
+	SET_GAMES,
+	SET_GAME_DETAIL,
+	SET_LOADING_FETCH,
+	SET_LOADING_ADD,
+	SET_LOADING_EDIT,
+	SET_ERROR,
+} from "./actionType";
 
 const baseURL = "http://localhost:3001/games";
 
@@ -11,9 +18,30 @@ export function setGames(payload) {
 	};
 }
 
-export function setLoading(payload) {
+export function setGameDetail(payload) {
 	return {
-		type: SET_LOADING,
+		type: SET_GAME_DETAIL,
+		payload,
+	};
+}
+
+export function setLoadingFetch(payload) {
+	return {
+		type: SET_LOADING_FETCH,
+		payload,
+	};
+}
+
+export function setLoadingAdd(payload) {
+	return {
+		type: SET_LOADING_ADD,
+		payload,
+	};
+}
+
+export function setLoadingEdit(payload) {
+	return {
+		type: SET_LOADING_EDIT,
 		payload,
 	};
 }
@@ -29,14 +57,15 @@ export function fetchGames() {
 	return async function (dispatch) {
 		try {
 			dispatch(setError(null));
-			dispatch(setLoading(true));
+			dispatch(setLoadingFetch(true));
 			const response = await axios.get(baseURL);
+			console.log(response.data);
 
 			dispatch(setGames(response.data));
 		} catch (error) {
 			dispatch(setError(error));
 		} finally {
-			dispatch(setLoading(false));
+			dispatch(setLoadingFetch(false));
 		}
 	};
 }
@@ -45,14 +74,14 @@ export function fetchGameByID(payload) {
 	return async function (dispatch) {
 		try {
 			dispatch(setError(null));
-			dispatch(setLoading(true));
+			dispatch(setLoadingFetch(true));
 			const response = await axios.get(`${baseURL}/${payload}`);
 
-			dispatch(setGames(response.data));
+			dispatch(setGameDetail(response.data));
 		} catch (error) {
 			dispatch(setError(error));
 		} finally {
-			dispatch(setLoading(false));
+			dispatch(setLoadingFetch(false));
 		}
 	};
 }
@@ -61,11 +90,13 @@ export function addGame(payload) {
 	return async function (dispatch) {
 		try {
 			dispatch(setError(null));
-			const response = await axios.post(baseURL, payload);
+			dispatch(setLoadingAdd(true));
 
-			dispatch(setGames(response.data));
+			await axios.post(baseURL, payload);
 		} catch (error) {
 			dispatch(setError(error));
+		} finally {
+			dispatch(setLoadingAdd(false));
 		}
 	};
 }
@@ -73,11 +104,13 @@ export function addGame(payload) {
 export function editGame(id, payload) {
 	return async function (dispatch) {
 		try {
-			const response = await axios.put(`${baseURL}/${id}`, payload);
-
-			dispatch(setGames(response.data));
+			dispatch(setError(null));
+			dispatch(setLoadingEdit(true));
+			await axios.put(`${baseURL}/${id}`, payload);
 		} catch (error) {
 			dispatch(setError(error));
+		} finally {
+			dispatch(setLoadingEdit(false));
 		}
 	};
 }
@@ -85,7 +118,9 @@ export function editGame(id, payload) {
 export function deleteGame(id) {
 	return async function (dispatch) {
 		try {
+			dispatch(setError(null));
 			await axios.delete(`${baseURL}/${id}`);
+			dispatch(fetchGames());
 		} catch (error) {
 			dispatch(setError(error));
 		}
