@@ -199,7 +199,7 @@ function GameCard({ isHome, isCart, game, cart }) {
 						<div>
 							<h2 className="card-title">{game.name}</h2>
 							<h2 className="card-title" style={{ color: "#66c0f4" }}>
-								{formatPrice(game.price)}
+								{formatPrice(Number(game.price))}
 							</h2>
 							<p style={{ height: "100px" }}>{game.description}</p>
 						</div>
@@ -269,7 +269,7 @@ function GameCard({ isHome, isCart, game, cart }) {
 						<div>
 							<h2 className="card-title">{cart.name}</h2>
 							<h2 className="card-title" style={{ color: "#66c0f4" }}>
-								{formatPrice(cart.price)}
+								{formatPrice(Number(cart.price))}
 							</h2>
 							<p style={{ height: "100px" }}>{cart.description}</p>
 						</div>
