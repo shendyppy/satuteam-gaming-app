@@ -86,6 +86,14 @@
       "price": 549999,
       "link": "https://store.steampowered.com/app/1569040/Football_Manager_2022/",
       "id": 11
+    },
+    {
+      "name": "Tribes of Midgard",
+      "description": "The Giants are coming! Form a tribe with up to 10 players to defend your village from the relentless onslaught of deadly spirits and gigantic brutes hel-bent on bringing on the end of the world in this game with a unique blend of action, survival, and roguelite elements.",
+      "cover": "https://cdn.akamai.steamstatic.com/steam/apps/858820/header.jpg?t=1633442282",
+      "price": "135999",
+      "link": "https://store.steampowered.com/app/858820/Tribes_of_Midgard/",
+      "id": 12
     }
   ],
   "cart": [

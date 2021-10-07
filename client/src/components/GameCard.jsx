@@ -213,7 +213,7 @@ function GameCard({ isHome, isCart, game, cart }) {
 		return (
 			<>
 				<div
-					className="card bordered m-5 shadow-2xl"
+					className="card bordered m-5 shadow-2xl overflow-auto"
 					style={{
 						backgroundColor: "#1b2838",
 						color: "#c7d5e0",
