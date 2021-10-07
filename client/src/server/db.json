@@ -1,0 +1,46 @@
+{
+	"games": [
+		{
+			"id": 1,
+			"name": "PLAYERUNKNOWN'S BATTLEGROUNDS",
+			"cover": "https://steamcdn-a.akamaihd.net/steam/apps/578080/header.jpg?t=1587582005",
+			"price": 109999,
+			"description": "PLAYERUNKNOWN'S BATTLEGROUNDS is a battle royale shooter that pits 100 players against each other in a struggle for survival. Gather supplies and outwit your opponents to become the last person standing.",
+			"steamLink": "https://store.steampowered.com/app/578080/PLAYERUNKNOWNS_BATTLEGROUNDS/"
+		},
+		{
+			"id": 2,
+			"name": "Dead by Daylight",
+			"cover": "https://steamcdn-a.akamaihd.net/steam/apps/381210/header.jpg?t=1587510462",
+			"price": 54399,
+			"description": "Dead by Daylight is a multiplayer (4vs1) horror game where one player takes on the role of the savage Killer, and the other four players play as Survivors, trying to escape the Killer and avoid being caught and killed.",
+			"steamLink": "https://store.steampowered.com/app/381210/Dead_by_Daylight/"
+		},
+		{
+			"id": 3,
+			"name": "Rocket League",
+			"cover": "https://steamcdn-a.akamaihd.net/steam/apps/252950/header_alt_assets_11.jpg?t=1585155609",
+			"price": 135999,
+			"description": "Rocket League is a high-powered hybrid of arcade-style soccer and vehicular mayhem with easy-to-understand controls and fluid, physics-driven competition. Rocket League includes casual and competitive Online Matches",
+			"steamLink": "https://store.steampowered.com/app/252950/Rocket_League/"
+		},
+		{
+			"id": 4,
+			"name": "Counter-Strike: Global Offensive",
+			"description": "Counter-Strike: Global Offensive (CS: GO) expands upon the team-based action gameplay that it pioneered when it was launched 19 years ago. CS: GO features new maps, characters, weapons, and game modes",
+			"cover": "https://steamcdn-a.akamaihd.net/steam/apps/730/header.jpg?t=1585696022",
+			"steamLink": "https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/",
+			"price": 215999
+		}
+	],
+	"cart": [
+		{
+			"id": 1,
+			"name": "PLAYERUNKNOWN'S BATTLEGROUNDS",
+			"cover": "https://steamcdn-a.akamaihd.net/steam/apps/578080/header.jpg?t=1587582005",
+			"price": 109999,
+			"description": "PLAYERUNKNOWN'S BATTLEGROUNDS is a battle royale shooter that pits 100 players against each other in a struggle for survival. Gather supplies and outwit your opponents to become the last person standing.",
+			"steamLink": "https://store.steampowered.com/app/578080/PLAYERUNKNOWNS_BATTLEGROUNDS/"
+		}
+	]
+}
