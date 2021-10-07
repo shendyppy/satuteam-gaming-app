@@ -17,7 +17,7 @@ function Navbar() {
 						/>
 						<span
 							className="text-lg font-bold inline ml-2"
-							style={{ color: "white" }}
+							style={{ color: "#c7d5e0" }}
 						>
 							STEAM
 						</span>
@@ -25,11 +25,11 @@ function Navbar() {
 				</div>
 				<div
 					className="flex-none hidden px-2 mx-2 lg:flex"
-					style={{ color: "white" }}
+					style={{ color: "#c7d5e0" }}
 				>
 					<div className="flex items-stretch">
 						<Link to={"/cart"}>
-							<a className="btn btn-ghost btn-sm rounded-btn">
+							<a className="btn btn-ghost btn-sm rounded-btn" href=" ">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="24"
@@ -44,7 +44,7 @@ function Navbar() {
 							</a>
 						</Link>
 						<Link to={"/add"}>
-							<a className="btn btn-ghost btn-sm rounded-btn">
+							<a className="btn btn-ghost btn-sm rounded-btn" href=" ">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="24"

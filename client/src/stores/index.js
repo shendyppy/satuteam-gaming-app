@@ -7,7 +7,7 @@ import gameReducer from "./games/reducer";
 const store = createStore(
 	combineReducers({
 		carts: cartReducer,
-		gamess: gameReducer,
+		games: gameReducer,
 	}),
 	applyMiddleware(thunk)
 );
