@@ -59,7 +59,6 @@ export function fetchGames() {
 			dispatch(setError(null));
 			dispatch(setLoadingFetch(true));
 			const response = await axios.get(baseURL);
-			console.log(response.data);
 
 			dispatch(setGames(response.data));
 		} catch (error) {
