@@ -19,7 +19,7 @@ function Navbar() {
 							className="text-lg font-bold inline ml-2"
 							style={{ color: "#c7d5e0" }}
 						>
-							STEAM
+							SATUTEAM
 						</span>
 					</Link>
 				</div>
