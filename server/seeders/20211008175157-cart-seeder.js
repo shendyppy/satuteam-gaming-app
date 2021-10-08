@@ -32,7 +32,7 @@ module.exports = {
 				{
 					name: "NARAKA: BLADEPOINT",
 					description:
-						"NARAKA: BLADEPOINT is a 60-player action combat offering players insane mobility",
+						"NARAKA: BLADEPOINT is a 60-player action combat offering players insane mobility!",
 					cover:
 						"https://cdn.akamai.steamstatic.com/steam/apps/1203220/header.jpg?t=1632317911",
 					price: 220000,
