@@ -16,7 +16,7 @@ function Add() {
 	const [description, setDescription] = useState("");
 	const [cover, setCover] = useState("");
 	const [price, setPrice] = useState("");
-	const [link, setLink] = useState("");
+	const [steamLink, setLink] = useState("");
 
 	const { loadingAdd } = useSelector((state) => state.games);
 
@@ -53,7 +53,7 @@ function Add() {
 			description,
 			cover,
 			price,
-			link,
+			steamLink,
 		};
 
 		if (
@@ -61,7 +61,7 @@ function Add() {
 			payload.description === "" ||
 			payload.cover === "" ||
 			payload.price === "" ||
-			payload.link === ""
+			payload.steamLink === ""
 		) {
 			return toast.error("Please fill all the field!");
 		} else if (payload.price < 10000) {
@@ -186,7 +186,7 @@ function Add() {
 								<input
 									className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
 									onChange={forLink}
-									value={link}
+									value={steamLink}
 								/>
 							</div>
 
