@@ -18,7 +18,7 @@ function Edit() {
 	const [description, setDescription] = useState("");
 	const [cover, setCover] = useState("");
 	const [price, setPrice] = useState(0);
-	const [link, setLink] = useState("");
+	const [steamLink, setLink] = useState("");
 
 	useEffect(() => {
 		dispatch(fetchGameByID(id));
@@ -65,7 +65,7 @@ function Edit() {
 			description,
 			cover,
 			price,
-			link,
+			steamLink,
 		};
 
 		if (
@@ -73,7 +73,7 @@ function Edit() {
 			payload.description === "" ||
 			payload.cover === "" ||
 			payload.price === 0 ||
-			payload.link === ""
+			payload.steamLink === ""
 		) {
 			return toast.error("Please fill all the field!");
 		} else if (payload.price < 10000) {
@@ -199,7 +199,7 @@ function Edit() {
 								<input
 									className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
 									onChange={forLink}
-									value={link}
+									value={steamLink}
 								/>
 							</div>
 
