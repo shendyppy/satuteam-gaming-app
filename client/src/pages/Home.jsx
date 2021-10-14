@@ -47,57 +47,63 @@ function Home() {
 				<NoDataFound />
 			) : (
 				<>
-					<div>
-						<h1 className="text-center text-3xl font-bold mt-10">
-							Differential Price
-						</h1>
+					<div style={{ alignItems: "center", justifyContent: "center" }}>
+						<div style={{ alignItems: "center", justifyContent: "center" }}>
+							<h1 className="text-center text-3xl font-bold mt-10">
+								Differential Price
+							</h1>
 
-						<div className="container mx-auto text-center mt-10 mb-10">
-							<Chart game={game} price={price} />
+							<div className="container mx-auto text-center mt-10 mb-10">
+								<Chart game={game} price={price} />
+							</div>
 						</div>
-					</div>
 
-					<div>
-						<h1 className="text-center text-3xl font-bold mt-10">
-							List Game With Price
-						</h1>
-						<div className="container mx-auto text-center mt-10 mb-10">
-							<div className="container mx-auto text-center mt-10">
-								<div
-									className="card ml-14 mr-14 shadow-xl"
-									style={{
-										backgroundColor: "#c7d5e0",
-										borderWidth: 2,
-										borderColor: "#2a475e",
-									}}
-								>
-									<div className="m-8">
-										<div className="overflow-x-auto">
-											<table
-												className="table-auto m-2"
-												style={{ minWidth: "99%" }}
-											>
-												<TableHead />
-												{games.map((game) => {
-													return <TableBody game={game} key={game.id} />;
-												})}
-											</table>
+						<div style={{ alignItems: "center", justifyContent: "center" }}>
+							<h1 className="text-center text-3xl font-bold mt-10">
+								List Game With Price
+							</h1>
+							<div className="container mx-auto text-center mt-10 mb-10">
+								<div className="container mx-auto text-center mt-10">
+									<div
+										className="card ml-14 mr-14 shadow-xl"
+										style={{
+											backgroundColor: "#c7d5e0",
+											borderWidth: 2,
+											borderColor: "#2a475e",
+										}}
+									>
+										<div className="m-8">
+											<div className="overflow-auto">
+												<table
+													className="table-auto m-2 mx-auto"
+													style={{
+														alignItems: "center",
+														justifyContent: "center",
+														minWidth: "95%",
+													}}
+												>
+													<TableHead />
+													{games.map((game, index) => {
+														return <TableBody game={game} key={index} />;
+													})}
+												</table>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
 
-					<div>
-						<h1 className="text-center text-3xl font-bold mt-10">
-							Game Database
-						</h1>
-						<div className="container mx-auto text-center mt-10 mb-10">
-							<div className="grid grid-cols-2 ml-10 mr-10">
-								{games?.map((game, index) => {
-									return <GameCard game={game} key={index} isHome={true} />;
-								})}
+						<div>
+							<h1 className="text-center text-3xl font-bold mt-10">
+								Game Database
+							</h1>
+							<div className="container mx-auto text-center mt-10 mb-10">
+								<div className="grid grid-cols-2 ml-10 mr-10">
+									{games?.map((game, index) => {
+										return <GameCard game={game} key={index} isHome={true} />;
+									})}
+								</div>
 							</div>
 						</div>
 					</div>

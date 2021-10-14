@@ -4,8 +4,9 @@ function Navbar() {
 	return (
 		<>
 			<div
-				className="navbar mb-2 shadow-lg bg-light text-neutral-content"
+				className="navbar mb-2 shadow-lg text-neutral-content flex"
 				style={{ backgroundColor: "#2a475e" }}
+				id="navbar"
 			>
 				<div className="flex-1 px-2 mx-2">
 					<Link to={"/"}>
@@ -13,20 +14,17 @@ function Navbar() {
 							src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg"
 							alt="No Data"
 							className="inline"
-							style={{ width: "10%", height: "10%" }}
+							style={{ width: "100px", height: "50px" }}
 						/>
 						<span
-							className="text-lg font-bold inline ml-2"
+							className="text-lg font-bold inline"
 							style={{ color: "#c7d5e0" }}
 						>
 							SATUTEAM
 						</span>
 					</Link>
 				</div>
-				<div
-					className="flex-none hidden px-2 mx-2 lg:flex"
-					style={{ color: "#c7d5e0" }}
-				>
+				<div className="flex px-2 mx-2 lg:flex" style={{ color: "#c7d5e0" }}>
 					<div className="flex items-stretch">
 						<Link to={"/cart"}>
 							<button className="btn btn-ghost btn-sm rounded-btn">
