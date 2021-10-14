@@ -8,15 +8,8 @@ function TableHead() {
 							color: "#2a475e",
 							backgroundColor: "#66c0f4",
 							fontSize: 24,
-						}}
-					>
-						No.
-					</th>
-					<th
-						style={{
-							color: "#2a475e",
-							backgroundColor: "#66c0f4",
-							fontSize: 24,
+							borderWidth: 1,
+							borderColor: "#2a475e",
 						}}
 					>
 						Name
@@ -26,7 +19,8 @@ function TableHead() {
 							color: "#2a475e",
 							backgroundColor: "#66c0f4",
 							fontSize: 24,
-							padding: 10,
+							borderWidth: 1,
+							borderColor: "#2a475e",
 						}}
 					>
 						Price
