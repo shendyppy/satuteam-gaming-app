@@ -4,12 +4,12 @@
 	"description": "",
 	"main": "app.js",
 	"scripts": {
-		"dev": "NODE_ENV=development npx nodemon app.js",
+		"dev": "nodemon bin/www",
 		"start": "node app.js",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "jest --detectOpenHandles --forceExit"
 	},
 	"keywords": [],
-	"author": "",
+	"author": "Shendy Putra Perdana Yohansah",
 	"license": "ISC",
 	"dependencies": {
 		"cors": "^2.8.5",
@@ -19,7 +19,9 @@
 	},
 	"devDependencies": {
 		"dotenv": "^10.0.0",
+		"jest": "^27.2.5",
 		"nodemon": "^2.0.13",
-		"sequelize-cli": "^6.2.0"
+		"sequelize-cli": "^6.2.0",
+		"supertest": "^6.1.6"
 	}
 }
