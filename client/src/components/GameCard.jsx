@@ -201,14 +201,21 @@ function GameCard({ isHome, isCart, game, cart }) {
 						</a>
 
 						<div
-							className="mt-4"
+							className="mt-4 mb-10 m-4"
 							style={{ alignItems: "center", justifyContent: "center" }}
 						>
 							<h2 className="card-title text-center">{game.name}</h2>
-							<h2 className="card-title" style={{ color: "#66c0f4" }}>
-								{formatPrice(Number(game.price))}
-							</h2>
-							<p style={{ height: "100px" }}>{game.description}</p>
+							{game.price === 0 ? (
+								<h2 className="card-title" style={{ color: "#66c0f4" }}>
+									Free to Play
+								</h2>
+							) : (
+								<h2 className="card-title" style={{ color: "#66c0f4" }}>
+									{formatPrice(Number(game.price))}
+								</h2>
+							)}
+
+							<p style={{ minHeight: "100px" }}>{game.description}</p>
 						</div>
 					</div>
 				</div>
@@ -281,12 +288,18 @@ function GameCard({ isHome, isCart, game, cart }) {
 						</a>
 					</div>
 
-					<div className="mt-4">
+					<div className="mt-4 mb-10 m-4">
 						<h2 className="card-title text-center">{cart.name}</h2>
-						<h2 className="card-title" style={{ color: "#66c0f4" }}>
-							{formatPrice(Number(cart.price))}
-						</h2>
-						<p style={{ height: "100px" }}>{cart.description}</p>
+						{cart.price === 0 ? (
+							<h2 className="card-title" style={{ color: "#66c0f4" }}>
+								Free to Play
+							</h2>
+						) : (
+							<h2 className="card-title" style={{ color: "#66c0f4" }}>
+								{formatPrice(Number(cart.price))}
+							</h2>
+						)}
+						<p style={{ minHeight: "100px" }}>{cart.description}</p>
 					</div>
 				</div>
 			</>

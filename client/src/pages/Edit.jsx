@@ -76,8 +76,8 @@ function Edit() {
 			payload.steamLink === ""
 		) {
 			return toast.error("Please fill all the field!");
-		} else if (payload.price < 10000) {
-			return toast.error("Minimum price of the price is IDR 10.000");
+		} else if (payload.price < 0) {
+			return toast.error("Price cant be less than zero");
 		} else {
 			dispatch(editGame(id, payload));
 			dispatch(fetchGames());
