@@ -29,7 +29,7 @@ function Cart() {
 					<div style={{ minHeight: "800px" }}>
 						<h1 className="text-center text-3xl font-bold mt-10">Your Cart</h1>
 						<div className="container mx-auto text-center mt-10 mb-10">
-							<div className="grid grid-cols-2 ml-10 mr-10">
+							<div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6 ml-10 mr-10">
 								{carts?.map((cart, index) => {
 									return <GameCard cart={cart} key={index} isCart={true} />;
 								})}

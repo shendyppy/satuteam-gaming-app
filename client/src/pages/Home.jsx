@@ -99,7 +99,7 @@ function Home() {
 								Game Database
 							</h1>
 							<div className="container mx-auto text-center mt-10 mb-10">
-								<div className="grid grid-cols-2 ml-10 mr-10">
+								<div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-2 ml-10 mr-10">
 									{games?.map((game, index) => {
 										return <GameCard game={game} key={index} isHome={true} />;
 									})}
