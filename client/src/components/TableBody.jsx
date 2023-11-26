@@ -1,4 +1,4 @@
-import formatPrice from "../helpers/getRupiah";
+import { formatPrice } from "../helpers/getRupiah";
 
 function TableBody({ game, index }) {
 	return (
