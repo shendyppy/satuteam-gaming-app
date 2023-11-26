@@ -1,49 +1,50 @@
-import { useDispatch, useSelector } from "react-redux";
-import { useHistory } from "react-router";
-import { ToastContainer, toast } from "react-toastify";
+import { Row, Col } from 'antd';
+// import { useDispatch } from "react-redux";
+// import { useHistory } from "react-router";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import swal from "sweetalert";
 
-import { addCart, deleteCart } from "../stores/cart/action";
-import formatPrice from "../helpers/getRupiah";
-import { deleteGame } from "../stores/games/action";
+// import { addCart, deleteCart } from "../stores/cart/action";
+import { formatPrice, discountedPrice } from "../helpers/getRupiah";
+// import { deleteGame } from "../stores/games/action";
 
 function GameCard({ isHome, isCart, game, cart }) {
-	const history = useHistory();
-	const dispatch = useDispatch();
+	// const history = useHistory();
+	// const dispatch = useDispatch();
 
-	const { carts } = useSelector((state) => state.carts);
+	// const { carts } = useSelector((state) => state.carts);
 
-	const handleToEdit = (e) => {
-		e.preventDefault();
-		history.push(`/edit/${game.id}`);
-	};
+	// const handleToEdit = (e) => {
+	// 	e.preventDefault();
+	// 	history.push(`/edit/${game.id}`);
+	// };
 
-	const handleDeleteGame = (e) => {
-		e.preventDefault();
-		swal({
-			title: "Are you sure?",
-			text: "Once deleted, you will not be able to recover this data!",
-			icon: "warning",
-			buttons: true,
-			dangerMode: true,
-		})
-			.then((willDelete) => {
-				if (willDelete) {
-					dispatch(deleteGame(game.id));
-					swal("Poof! Your data has been deleted!", {
-						icon: "success",
-					});
-				} else {
-					swal("Your data is safe!", {
-						icon: "info",
-					});
-				}
-			})
-			.catch((err) => {
-				console.log(err);
-			});
-	};
+	// const handleDeleteGame = (e) => {
+	// 	e.preventDefault();
+	// 	swal({
+	// 		title: "Are you sure?",
+	// 		text: "Once deleted, you will not be able to recover this data!",
+	// 		icon: "warning",
+	// 		buttons: true,
+	// 		dangerMode: true,
+	// 	})
+	// 		.then((willDelete) => {
+	// 			if (willDelete) {
+	// 				dispatch(deleteGame(game.id));
+	// 				swal("Poof! Your data has been deleted!", {
+	// 					icon: "success",
+	// 				});
+	// 			} else {
+	// 				swal("Your data is safe!", {
+	// 					icon: "info",
+	// 				});
+	// 			}
+	// 		})
+	// 		.catch((err) => {
+	// 			console.log(err);
+	// 		});
+	// };
 
 	const handleBuyGame = (e) => {
 		e.preventDefault();
@@ -56,7 +57,7 @@ function GameCard({ isHome, isCart, game, cart }) {
 		})
 			.then((willDelete) => {
 				if (willDelete) {
-					dispatch(deleteCart(cart.id));
+					// dispatch(deleteCart(cart.id));
 					swal("Thank you for buying! Enjoy the game!", {
 						icon: "success",
 					});
@@ -81,7 +82,7 @@ function GameCard({ isHome, isCart, game, cart }) {
 		})
 			.then((willDelete) => {
 				if (willDelete) {
-					dispatch(deleteCart(cart.id));
+					// dispatch(deleteCart(cart.id));
 					swal("Its okay! Take your time to browse another game", {
 						icon: "info",
 					});
@@ -96,16 +97,16 @@ function GameCard({ isHome, isCart, game, cart }) {
 			});
 	};
 
-	const handleAddToCart = (e) => {
-		if (carts.filter((el) => el.id === game.id).length === 0) {
-			e.preventDefault();
-			dispatch(addCart(game));
-			toast.success("Successfully adding game to your cart!");
-		} else {
-			e.preventDefault();
-			toast.error("Already in your cart!");
-		}
-	};
+	// const handleAddToCart = (e) => {
+	// 	if (carts.filter((el) => el.id === game.id).length === 0) {
+	// 		e.preventDefault();
+	// 		dispatch(addCart(game));
+	// 		toast.success("Successfully adding game to your cart!");
+	// 	} else {
+	// 		e.preventDefault();
+	// 		toast.error("Already in your cart!");
+	// 	}
+	// };
 
 	if (isHome) {
 		return (
@@ -144,7 +145,7 @@ function GameCard({ isHome, isCart, game, cart }) {
 						className="mx-auto card-actions"
 						style={{ alignItems: "center", justifyContent: "center" }}
 					>
-						<a href=" " onClick={handleAddToCart}>
+						<a href style={{ cursor: "not-allowed" }}>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="32"
@@ -157,7 +158,7 @@ function GameCard({ isHome, isCart, game, cart }) {
 								<path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
 							</svg>
 						</a>
-						<a href=" " onClick={handleToEdit}>
+						<a href style={{ cursor: "not-allowed" }}>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="32"
@@ -183,7 +184,7 @@ function GameCard({ isHome, isCart, game, cart }) {
 								<path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
 							</svg>
 						</a>
-						<a href=" " onClick={handleDeleteGame}>
+						<a href style={{ cursor: "not-allowed" }}>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="32"
@@ -210,9 +211,39 @@ function GameCard({ isHome, isCart, game, cart }) {
 									Free to Play
 								</h2>
 							) : (
-								<h2 className="card-title" style={{ color: "#66c0f4" }}>
-									{formatPrice(Number(game.price))}
-								</h2>
+								<>
+									{game.discount !== 0 ? (
+										<Row align="middle">
+											<Col
+												span={11}
+												style={{
+													textAlign: 'right',
+													marginRight: 10,
+													marginLeft: 10
+												}}
+											>
+												<h2 className="card-title" style={{ color: "#66c0f4", textDecoration: "line-through" }}>
+													{formatPrice(Number(game.price))}
+												</h2>
+											</Col>
+											<Col
+												span={11}
+												style={{
+													textAlign: 'left',
+													marginRight: 10
+												}}
+											>
+												<h2 className="card-title" style={{ color: "#66c0f4" }}>
+													{formatPrice(discountedPrice(game.price, game.discount))}
+												</h2>
+											</Col>
+										</Row>
+									) : (
+										<h2 className="card-title" style={{ color: "#66c0f4" }}>
+											{formatPrice(Number(game.price))}
+										</h2>
+									)}
+								</>
 							)}
 
 							<p style={{ minHeight: "100px" }}>{game.description}</p>
@@ -270,7 +301,7 @@ function GameCard({ isHome, isCart, game, cart }) {
 								<path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
 							</svg>
 						</a>
-						<a href=" " onClick={handleDeleteGameFromCart}>
+						<a href onClick={handleDeleteGameFromCart}>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="32"
@@ -295,9 +326,39 @@ function GameCard({ isHome, isCart, game, cart }) {
 								Free to Play
 							</h2>
 						) : (
-							<h2 className="card-title" style={{ color: "#66c0f4" }}>
-								{formatPrice(Number(cart.price))}
-							</h2>
+							<>
+								{cart.discount !== 0 ? (
+									<Row align="middle">
+										<Col
+											span={11}
+											style={{
+												textAlign: 'right',
+												marginRight: 10,
+												marginLeft: 10
+											}}
+										>
+											<h2 className="card-title" style={{ color: "#66c0f4", textDecoration: "line-through" }}>
+												{formatPrice(Number(cart.price))}
+											</h2>
+										</Col>
+										<Col
+											span={11}
+											style={{
+												textAlign: 'left',
+												marginRight: 10
+											}}
+										>
+											<h2 className="card-title" style={{ color: "#66c0f4" }}>
+												{formatPrice(discountedPrice(cart.price, cart.discount))}
+											</h2>
+										</Col>
+									</Row>
+								) : (
+									<h2 className="card-title" style={{ color: "#66c0f4" }}>
+										{formatPrice(Number(cart.price))}
+									</h2>
+								)}
+							</>
 						)}
 						<p style={{ minHeight: "100px" }}>{cart.description}</p>
 					</div>

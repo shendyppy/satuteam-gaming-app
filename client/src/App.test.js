@@ -14,7 +14,7 @@ describe("Home", () => {
 		render(<App />);
 
 		screen.getByText(
-			"Copyright © 2021 - All right reserved by Shendy Putra Perdana Yohansah"
+			"Copyright © 2023 - All right reserved by Shendy Putra Perdana Yohansah"
 		);
 	});
 
@@ -38,7 +38,7 @@ describe("Add", () => {
 		render(<App />);
 
 		screen.getByText(
-			"Copyright © 2021 - All right reserved by Shendy Putra Perdana Yohansah"
+			"Copyright © 2023 - All right reserved by Shendy Putra Perdana Yohansah"
 		);
 	});
 
@@ -62,7 +62,7 @@ describe("Edit", () => {
 		render(<App />);
 
 		screen.getByText(
-			"Copyright © 2021 - All right reserved by Shendy Putra Perdana Yohansah"
+			"Copyright © 2023 - All right reserved by Shendy Putra Perdana Yohansah"
 		);
 	});
 
@@ -86,7 +86,7 @@ describe("Cart", () => {
 		render(<App />);
 
 		screen.getByText(
-			"Copyright © 2021 - All right reserved by Shendy Putra Perdana Yohansah"
+			"Copyright © 2023 - All right reserved by Shendy Putra Perdana Yohansah"
 		);
 	});
 
