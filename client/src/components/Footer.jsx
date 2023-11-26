@@ -7,11 +7,8 @@ function Footer() {
 			>
 				<div style={{ color: "#c7d5e0" }}>
 					<p>
-						Copyright © 2023 - All right reserved by Shendy Putra Perdana
+						Copyright © 2021 - All right reserved by Shendy Putra Perdana
 						Yohansah
-					</p>
-					<p>
-						Function is disabled, read-only purposes.
 					</p>
 				</div>
 			</footer>

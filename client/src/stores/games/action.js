@@ -9,7 +9,7 @@ import {
 	SET_ERROR,
 } from "./actionType";
 
-const baseURL = "https://satuteam.herokuapp.com/games";
+const baseURL = "http://localhost:3001/games";
 
 export function setGames(payload) {
 	return {
