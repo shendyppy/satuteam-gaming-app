@@ -2,7 +2,7 @@ import axios from "axios";
 
 import { SET_CART, SET_ERROR, SET_LOADING } from "./actionType";
 
-const baseURL = "https://satuteam.herokuapp.com/carts";
+const baseURL = "http://localhost:3001/cart";
 
 export function setCart(payload) {
 	return {

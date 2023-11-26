@@ -4,7 +4,7 @@ function Chart({ game, price }) {
 	return (
 		<>
 			<div
-				className="card shadow-xl ml-14 mr-14 mx-auto"
+				className="card shadow-xl ml-14 mr-14"
 				style={{
 					backgroundColor: "#c7d5e0",
 					borderWidth: 2,
@@ -32,8 +32,8 @@ function Chart({ game, price }) {
 							},
 						],
 					}}
-					width={30}
-					height={30}
+					width={100}
+					height={50}
 					className="m-4"
 				/>
 			</div>

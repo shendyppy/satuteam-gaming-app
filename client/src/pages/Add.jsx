@@ -16,7 +16,7 @@ function Add() {
 	const [description, setDescription] = useState("");
 	const [cover, setCover] = useState("");
 	const [price, setPrice] = useState("");
-	const [steamLink, setLink] = useState("");
+	const [link, setLink] = useState("");
 
 	const { loadingAdd } = useSelector((state) => state.games);
 
@@ -53,7 +53,7 @@ function Add() {
 			description,
 			cover,
 			price,
-			steamLink,
+			link,
 		};
 
 		if (
@@ -61,11 +61,11 @@ function Add() {
 			payload.description === "" ||
 			payload.cover === "" ||
 			payload.price === "" ||
-			payload.steamLink === ""
+			payload.link === ""
 		) {
 			return toast.error("Please fill all the field!");
-		} else if (payload.price < 0) {
-			return toast.error("Price cant be less than zero");
+		} else if (payload.price < 10000) {
+			return toast.error("Minimum price of the price is IDR 10.000");
 		} else {
 			dispatch(addGame(payload));
 			return toast.success("Thank you for your contribution!");
@@ -121,7 +121,7 @@ function Add() {
 						borderColor: "#66c0f4",
 					}}
 				>
-					<div className="m-8 ">
+					<div className="m-8">
 						<form action="" type="submit" onSubmit={handleAddGame}>
 							<div className="form-control mt-2">
 								<label className="label">
@@ -186,7 +186,7 @@ function Add() {
 								<input
 									className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
 									onChange={forLink}
-									value={steamLink}
+									value={link}
 								/>
 							</div>
 
