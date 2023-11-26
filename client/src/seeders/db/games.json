@@ -1,0 +1,130 @@
+{
+	"games": [
+		{
+			"id": 1,
+			"name": "PLAYERUNKNOWN'S BATTLEGROUNDS",
+			"cover": "https://steamcdn-a.akamaihd.net/steam/apps/578080/header.jpg?t=1587582005",
+			"price": 0,
+			"description": "PLAYERUNKNOWN'S BATTLEGROUNDS is a battle royale shooter that pits 100 players against each other in a struggle for survival. Gather supplies and outwit your opponents to become the last person standing.",
+			"steamLink": "https://store.steampowered.com/app/578080/PLAYERUNKNOWNS_BATTLEGROUNDS/",
+			"discount": 0
+		},
+		{
+			"id": 2,
+			"name": "Dota 2",
+			"cover": "https://cdn.akamai.steamstatic.com/steam/apps/570/header.jpg?t=1700261778",
+			"price": 0,
+			"description": "Every day, millions of players worldwide enter battle as one of over a hundred Dota heroes. And no matter if it's their 10th hour of play or 1,000th, there's always something new to discover. With regular updates that ensure a constant evolution of gameplay, features, and heroes, Dota 2 has taken on a life of its own.",
+			"steamLink": "https://store.steampowered.com/app/570/Dota_2/",
+			"discount": 0
+		},
+		{
+			"id": 3,
+			"name": "Counter-Strike 2",
+			"description": "For over two decades, Counter-Strike has offered an elite competitive experience, one shaped by millions of players from across the globe. And now the next chapter in the CS story is about to begin. This is Counter-Strike 2.",
+			"cover": "https://steamcdn-a.akamaihd.net/steam/apps/730/header.jpg?t=1585696022",
+			"steamLink": "https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/",
+			"price": 0,
+			"discount": 0
+		},
+		{
+			"id": 4,
+			"name": "NARAKA: BLADEPOINT",
+			"description": "NARAKA: BLADEPOINT is a 60-player action combat offering players insane mobility powered by parkour and grappling hook, a vast arsenal of melee and ranged weapons, and a roster of characters with powerful abilities—transform yourself into a gigantic Vajra Warrior and crush your enemies!",
+			"cover": "https://cdn.akamai.steamstatic.com/steam/apps/1203220/header.jpg?t=1632317911",
+			"price": 0,
+			"steamLink": "https://store.steampowered.com/app/1203220/NARAKA_BLADEPOINT/",
+			"discount": 0
+		},
+		{
+			"id": 5,
+			"name": "Apex Legends™",
+			"cover": "https://cdn.akamai.steamstatic.com/steam/apps/1172470/header.jpg?t=1700150367",
+			"price": 0,
+			"description": "Apex Legends is the award-winning, free-to-play Hero Shooter from Respawn Entertainment. Master an ever-growing roster of legendary characters with powerful abilities, and experience strategic squad play and innovative gameplay in the next evolution of Hero Shooter and Battle Royale.",
+			"steamLink": "https://store.steampowered.com/app/1172470/Apex_Legends/",
+			"discount": 0
+		},
+		{
+			"id": 6,
+			"name": "Red Dead Redemption 2",
+			"cover": "https://cdn.akamai.steamstatic.com/steam/apps/1174180/header.jpg?t=1695140956",
+			"price": 640000,
+			"description": "Winner of over 175 Game of the Year Awards and recipient of over 250 perfect scores, RDR2 is the epic tale of outlaw Arthur Morgan and the infamous Van der Linde gang, on the run across America at the dawn of the modern age. Also includes access to the shared living world of Red Dead Online.",
+			"steamLink": "https://store.steampowered.com/app/1174180/Red_Dead_Redemption_2/",
+			"discount": 67
+		},
+		{
+			"id": 7,
+			"name": "Hogwarts Legacy",
+			"description": "Hogwarts Legacy is an immersive, open-world action RPG. Now you can take control of the action and be at the center of your own adventure in the wizarding world.",
+			"cover": "https://cdn.akamai.steamstatic.com/steam/apps/990080/header.jpg?t=1699983982",
+			"price": 799000,
+			"steamLink": "https://store.steampowered.com/app/990080/Hogwarts_Legacy/",
+			"discount": 40
+		},
+		{
+			"id": 8,
+			"name": "Stardew Valley",
+			"description": "You've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home?",
+			"cover": "https://cdn.akamai.steamstatic.com/steam/apps/413150/header.jpg?t=1666917466",
+			"price": 115999,
+			"steamLink": "https://store.steampowered.com/app/413150/Stardew_Valley/",
+			"discount": 20
+		},
+		{
+			"id": 9,
+			"name": "EA SPORTS FC™ 24",
+			"description": "EA SPORTS FC™ 24 welcomes you to The World’s Game: the most true-to-football experience ever with HyperMotionV, PlayStyles optimised by Opta, and an enhanced Frostbite™ Engine.",
+			"cover": "https://cdn.akamai.steamstatic.com/steam/apps/2195250/header.jpg?t=1700842401",
+			"price": 759000,
+			"steamLink": "https://store.steampowered.com/app/2195250/EA_SPORTS_FC_24/",
+			"discount": 50
+		},
+		{
+			"id": 10,
+			"name": "F1® 23",
+			"description": "Be the last to brake in EA SPORTS™ F1® 23, the official video game of the 2023 FIA Formula One World Championship™. A new chapter in the thrilling 'Braking Point' story mode delivers high-speed drama and heated rivalries.",
+			"cover": "https://cdn.akamai.steamstatic.com/steam/apps/2108330/header.jpg?t=1700503386",
+			"price": 759999,
+			"steamLink": "https://store.steampowered.com/app/2108330/F1_23/",
+			"discount": 60
+		},
+		{
+			"name": "Football Manager 2024",
+			"description": "Build a world-class team ready to dominate your rivals in football’s most prestigious competitions. Progress never stops when you’re pursuing footballing greatness.",
+			"cover": "https://cdn.akamai.steamstatic.com/steam/apps/2252570/header.jpg?t=1699889206",
+			"price": 619999,
+			"steamLink": "https://store.steampowered.com/app/2252570/Football_Manager_2024/",
+			"id": 11,
+			"discount": 0
+		},
+		{
+			"name": "God of War",
+			"description": "His vengeance against the Gods of Olympus years behind him, Kratos now lives as a man in the realm of Norse Gods and monsters. It is in this harsh, unforgiving world that he must fight to survive… and teach his son to do the same.",
+			"cover": "https://cdn.akamai.steamstatic.com/steam/apps/1593500/header.jpg?t=1695758729",
+			"price": 729000,
+			"steamLink": "https://store.steampowered.com/app/1593500/God_of_War/",
+			"id": 12,
+			"discount": 40
+		},
+		{
+			"name": "Party Animals",
+			"description": "Fight your friends as puppies, kittens and other fuzzy creatures in PARTY ANIMALS! Paw it out with your friends remotely, or huddle together for chaotic fun on the same screen. Interact with the world under our realistic physics engine. Did I mention PUPPIES?",
+			"cover": "https://cdn.akamai.steamstatic.com/steam/apps/1260320/header.jpg?t=1700573729",
+			"price": 205000,
+			"steamLink": "https://store.steampowered.com/app/1260320/Party_Animals/",
+			"id": 13,
+			"discount": 0
+		},
+		{
+			"name": "Subnautica",
+			"description": "Descend into the depths of an alien underwater world filled with wonder and peril. Craft equipment, pilot submarines and out-smart wildlife to explore lush coral reefs, volcanoes, cave systems, and more - all while trying to survive.",
+			"cover": "https://cdn.akamai.steamstatic.com/steam/apps/264710/header.jpg?t=1700522118",
+			"price": 139999,
+			"steamLink": "https://store.steampowered.com/app/264710/Subnautica/",
+			"id": 14,
+			"discount": 67
+		}
+	]
+}
